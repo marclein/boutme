@@ -214,7 +214,7 @@ header ul {
 }
 header ul::before {
  content:'';
- position:absolute;
+ position: absolute;
  z-index:-1;
  left:-5px;
  top:-4px;
@@ -225,7 +225,7 @@ header ul::before {
  box-shadow:rgba(0,0,0,0.2) 0 -1px 0,inset rgba(255,255,255,0.7) 0 -1px 0
 }
 header ul li {
- width:79px;
+ width:75px;
  float:left;
  border-right:1px solid #3A7CBE;
  height:38px
@@ -234,12 +234,16 @@ header ul li.single {
  border:none
 }
 header ul li+li {
- width:78px;
+ width:74px;
  border-left:1px solid #8BBEF3
 }
 header ul li+li+li {
- border-right:none;
- width:79px
+ border-right:1px solid #3A7CBE;
+ width:74px
+}
+header ul li+li+li+li+li {
+  border-right: none;
+  width: 75px
 }
 header ul a {
  line-height:1;
@@ -262,7 +266,7 @@ header ul a strong {
 
 header img {
   float:right;
-  margin-bottom: -1px;
+  margin-bottom: 5px;
   display: inline-block;
   width: 150px;
   border-radius: 50%;
@@ -274,7 +278,6 @@ div.backTop {
   border-radius: 5px;
   float: right;
   border:1px solid #3A7CBE;
-
 }
 
 section {
@@ -431,9 +434,14 @@ footer p+p {
  }
 }
 @media print, screen and (max-width: 580px) {
+  header {
+    overflow: hidden;
+  }
  header ul {
-  display:none
- }
+   display: block;
+   position: static;
+   margin-top: 5px
+   }
  header p.view {
   display:block
  }
@@ -441,7 +449,8 @@ footer p+p {
   width:60%
  }
  header img {
-   width: 40%
+   width: 40%;
+   margin-bottom: 5px
  }
 }
 @media print {
