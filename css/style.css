@@ -180,7 +180,7 @@ header.without-description h1 {
 header p {
  margin:0;
  color:#61778B;
- width:400px;
+ width:380px;
  font-size:16px;
  float: left;
 }
@@ -193,9 +193,11 @@ header p.view {
 header p.view a {
  color:#06c
 }
+
 header p.view small {
  font-weight:400
 }
+
 header ul {
  margin:0;
  padding:0;
@@ -212,6 +214,7 @@ header ul {
  box-shadow:inset rgba(255,255,255,0.45) 0 1px 0,inset rgba(0,0,0,0.2) 0 -1px 0;
  width:auto
 }
+
 header ul::before {
  content:'';
  position: absolute;
@@ -239,12 +242,21 @@ header ul li+li {
 }
 header ul li+li+li {
  border-right:1px solid #3A7CBE;
- width:74px
+ width:75px;
+ border-right: none;
 }
+header ul li+li+li+li {
+  width: 75px;
+  border-right:1px solid #3A7CBE;
+  border-left: none;
+}
+
 header ul li+li+li+li+li {
-  border-right: none;
-  width: 75px
+  border-right:1px solid #3A7CBE;
+  border-left:1px solid #8BBEF3;
+  width: 74px;
 }
+
 header ul a {
  line-height:1;
  font-size:11px;
@@ -270,7 +282,7 @@ header img {
   display: inline-block;
   width: 150px;
   border-radius: 50%;
-  margin: 5px -15px -5px 0;
+  margin: 5px -5px -5px 0;
   background: #fff;
 }
 div.backTop {
@@ -420,6 +432,10 @@ footer p+p {
   box-shadow:none;
   width:100%
  }
+ header {
+   overflow: hidden;
+ }
+
  footer {
   border-radius:0;
   padding:20px;
@@ -434,14 +450,11 @@ footer p+p {
  }
 }
 @media print, screen and (max-width: 580px) {
-  header {
-    overflow: hidden;
-  }
- header ul {
-   display: block;
-   position: static;
-   margin-top: 5px
-   }
+header ul {
+    overflow:visible;
+    width:228px;
+    height:76px;
+    }
  header p.view {
   display:block
  }
