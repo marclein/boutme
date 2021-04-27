@@ -245,14 +245,15 @@ header ul li+li+li {
  width:75px;
  border-right: none;
 }
-header ul li+li+li+li {
-  width: 75px;
-  border-right:1px solid #3A7CBE;
-  border-left: none;
-}
+
 
 header ul li+li+li+li+li {
   border-right:1px solid #3A7CBE;
+  border-left:1px solid #8BBEF3;
+  width: 74px;
+}
+header ul li+li+li+li+li+li {
+  border-right:none;
   border-left:1px solid #8BBEF3;
   width: 74px;
 }
@@ -450,11 +451,17 @@ footer p+p {
  }
 }
 @media print, screen and (max-width: 580px) {
-header ul {
+  header ul {
     overflow:visible;
     width:228px;
     height:76px;
     }
+  header ul li+li+li+li {
+      width: 75px;
+      border-right:1px solid #3A7CBE;
+      border-left: none;
+      border-top: 1px solid #3A7CBE;
+  }
  header p.view {
   display:block
  }
