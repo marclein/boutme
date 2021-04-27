@@ -436,6 +436,9 @@ footer p+p {
  header {
    overflow: hidden;
  }
+ header p {
+   height: 150px;
+ }
 
  footer {
   border-radius:0;
@@ -452,7 +455,11 @@ footer p+p {
 }
 @media print, screen and (max-width: 580px) {
   header ul {
-    overflow:visible;
+    position: relative;
+    margin-top: 10px;
+    left: 0px;
+    bottom: 0px;
+    float:left;
     width:228px;
     height:76px;
     }
@@ -466,7 +473,8 @@ footer p+p {
   display:block
  }
  header p {
-  width:60%
+  width:60%;
+  height: auto;
  }
  header img {
    width: 40%;
