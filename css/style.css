@@ -461,7 +461,7 @@ footer p+p {
     bottom: 0px;
     float:left;
     width:228px;
-    height:76px;
+    height:114px;
     }
   header ul li+li+li+li {
       width: 75px;
@@ -469,6 +469,14 @@ footer p+p {
       border-left: none;
       border-top: 1px solid #3A7CBE;
   }
+  header ul li+li+li+li+li+li+li {
+      width: 75px;
+      border-right:1px solid #3A7CBE;
+      border-left: none;
+      border-top: 1px solid #3A7CBE;
+  }
+  
+
  header p.view {
   display:block
  }
